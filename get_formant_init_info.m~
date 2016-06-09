@@ -1,0 +1,21 @@
+function [vods,perttrial_pre, perttrial_dur, pertclass_pitch_types, pert_type, yes_overwrite] = get_formant_init_info(subj_info)
+init_info_file = './formant_analysis_init_info.mat';
+curdir = cd;
+
+if ~exist(init_info_file,'file')
+    yes_overwrite = 0;
+else
+    load(init_info_file);
+end
+vods=input(sprintf('Was formant perturbation triggered relative to voice onset? [Y]/N : '),'s');
+if isempty(vods) 
+    vods = 'Y';
+end
+prompt={'Pre-perturbation time: ', 'Duration of trial: ','Formant pert values: '};
+title='Formant Perturbation Parameters ';
+num_lines=1;
+if ~exist(init_info_file,'file')
+  def={'0.2','1.2',['100' '0']};  
+ else
+def ={num2str(pitchlimits(1)),num2str(pitchlimits(2)),num2str(perttrial_pre),num2str(perttrial_dur),num2str(pertclass_pitch_types)};
+end 
