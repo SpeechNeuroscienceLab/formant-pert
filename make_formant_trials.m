@@ -17,6 +17,7 @@ if voice_onset==1
     vec_hist(5) = get_vec_hist6('blockalt',3);
     voice_onset_detect_sig = vec_hist(4).data;
     pert_alt_sig = squeeze(vec_hist(5).data(:,:,1));
+    pert_alt_sig = pert_alt_sig' ;
     vec_hist(6) = get_vec_hist6('lpc_inbuf_formants_freq',3);
     vec_hist(7) = get_vec_hist6('lpc_outbuf_formants_freq',3);
 end
