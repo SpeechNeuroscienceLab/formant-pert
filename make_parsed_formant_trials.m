@@ -1,5 +1,5 @@
-function make_parsed_formant_trials(perttrial_pre,perttrial_dur,fs,ystep,ntrials,formant_in,formant_out,
-                           parse_fig_pos)
+function make_parsed_formant_trials(perttrial_pre,perttrial_dur,fs,ystep,ntrials,formant_in,formant_out,...
+                           parse_fig_pos, formant_pert)
                            
 nframeswin  = round(perttrial_dur*fs/ystep);
 nframes_pre = round(perttrial_pre*fs/ystep);

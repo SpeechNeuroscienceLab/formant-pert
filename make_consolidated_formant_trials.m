@@ -22,7 +22,7 @@ else
           consld_formant_trials.itrial_in_block = [consld_formant_trials.itrial_in_block; (1:(formant_trials4block.ntrials))'];
         otherwise
           if size(formant_trials4block.(the_fldname),1) > 1
-            consld_formant_trials.(the_fldname) = [consld_formant_trials.(the_fldname); pitch_trials4block.(the_fldname)];
+            consld_formant_trials.(the_fldname) = [consld_formant_trials.(the_fldname); formant_trials4block.(the_fldname)];
           else
             if any(consld_formant_trials.(the_fldname) ~= formant_trials4block.(the_fldname))
               error('mismatch in (%s) at block(%d)',the_fldname,iblock);

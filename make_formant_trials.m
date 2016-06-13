@@ -64,10 +64,10 @@ for itr = 1:ntrials
         
     end
 if voice_onset==0
- pitch_pert(itr,:) = altsigs(:,2);
+ formant_pert(itr,:) = altsigs(:,2);
 end
 if voice_onset==1
-    pitch_pert(itr,:) = vodaltsigs;
+    formant_pert(itr,:) = vodaltsigs;
 end
 if yes_plot_trials
         clf

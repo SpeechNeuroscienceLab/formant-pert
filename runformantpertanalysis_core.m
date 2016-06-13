@@ -25,7 +25,7 @@ end
 load('formant_trials');
 if (yes_overwrite >= 4) || ~exist('parsed_formant_trials_test.mat','file')
     make_parsed_formant_trials(perttrial_pre,perttrial_dur,fs,ystep,ntrials,formant_in,formant_out,...
-                           parse_fig_pos);
+                           parse_fig_pos, formant_pert);
 end
 
 load('parsed_formant_trials_test');
